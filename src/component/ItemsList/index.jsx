@@ -30,13 +30,26 @@ const ItemsList = () => {
       <h1>Items List</h1>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      <ul>
-        {items.map((item) => (
-          <li key={item.ID}>
-            Name = {item.Name} Price = {item.Price}
-          </li> // Assuming each item has an id and name
-        ))}
-      </ul>
+      {items.length > 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((item) => (
+              <tr key={item.ID}>
+                <td>{item.ID}</td>
+                <td>{item.Name}</td>
+                <td>{item.Price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

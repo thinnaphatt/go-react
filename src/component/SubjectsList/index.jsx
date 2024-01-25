@@ -30,13 +30,26 @@ const SubjectsList = () => {
       <h1>Subjects List</h1>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      <ul>
-        {subjects.map((subjects) => (
-          <li key={subjects.ID}>
-            Code = {subjects.Code} Name = {subjects.Name}
-          </li> // Assuming each item has an id and name
-        ))}
-      </ul>
+      {subjects.length > 0 && (
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Code</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {subjects.map((subject) => (
+              <tr key={subject.ID}>
+                <td>{subject.ID}</td>
+                <td>{subject.Code}</td>
+                <td>{subject.Name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #000; /* Set text color to black */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.block {
+  display: flex;
+  flex-direction: row; /* Change to row to align horizontally */
+  justify-content: space-around; /* Adjust as needed */
+  align-items: center;
+  padding: 20px;
 }
 
 .card {
-  padding: 2em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  color: #000; /* Set heading color to black */
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Optional: Add some spacing and styling to the components inside the cards */
+.card > div {
+  margin-top: 15px;
+}
+
+/* Optional: Style for ItemsList, Students, Subjects components */
+.ItemsList-item,
+.Students-item,
+.Subjects-item {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ItemsList-item:hover,
+.Students-item:hover,
+.Subjects-item:hover {
+  background-color: #e0e0e0;
 }

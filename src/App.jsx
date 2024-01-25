@@ -7,15 +7,15 @@ function App() {
   return (
     <>
       <div className=" block">
-        <h1 className="pt-5">My Front-end</h1>
+        <h1 className="pt-5">My Front-End</h1>
         <div className="card pl-20">
           <ItemsList />
         </div>
         <div className="card">
-          <Students />
+          <Subjects />
         </div>
         <div className="card">
-          <Subjects />
+          <Students />
         </div>
       </div>
     </>
