@@ -1,11 +1,11 @@
 /* App.css */
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #000; /* Set text color to black */
+  background-color: #303030;
+  color: #ffffff; /* Set text color to black */
 }
 
 .block {
@@ -17,21 +17,17 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #5f2020;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   padding: 20px;
   width: 300px;
-  transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
+
 
 h1 {
-  color: #000; /* Set heading color to black */
+  color: #ffffff; /* Set heading color to black */
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;

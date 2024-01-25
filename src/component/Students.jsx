@@ -35,16 +35,20 @@ const StudentsList = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Code</th>
-              <th>Name</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Age</th>
+              <th>Grade</th>
             </tr>
           </thead>
           <tbody>
             {students.map((student) => (
               <tr key={student.ID}>
                 <td>{student.ID}</td>
-                <td>{student.Code}</td>
-                <td>{student.Name}</td>
+                <td>{student.FirstName}</td>
+                <td>{student.LastName}</td>
+                <td>{student.Age}</td>
+                <td>{student.Grade}</td>
               </tr>
             ))}
           </tbody>

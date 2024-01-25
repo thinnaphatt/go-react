@@ -35,16 +35,16 @@ const SubjectsList = () => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Code</th>
               <th>Name</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
             {subjects.map((subject) => (
               <tr key={subject.ID}>
                 <td>{subject.ID}</td>
-                <td>{subject.Code}</td>
                 <td>{subject.Name}</td>
+                <td>{subject.Description}</td>
               </tr>
             ))}
           </tbody>
