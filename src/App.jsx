@@ -16,33 +16,19 @@ function App() {
         <div className="card">
           <h2>Items List</h2>
           <ItemsList />
+          <ItemFormFind />
         </div>
 
         <div className="card">
           <h2>Subjects</h2>
           <Subjects />
+          <ItemFormFindSub />
         </div>
 
         <div className="card">
           <h2>Students</h2>
           <Students />
-        </div>
-      </div>
-
-      <div className="form-container">
-        <div className="card">
-          <h2>Item Form</h2>
-          <ItemFormFind />
-        </div>
-
-        <div className="card">
-          <h2>Student Form</h2>
           <ItemFormFindStu />
-        </div>
-
-        <div className="card">
-          <h2>Subject Form</h2>
-          <ItemFormFindSub />
         </div>
       </div>
     </div>
