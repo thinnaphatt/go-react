@@ -8,7 +8,7 @@ import ItemFormFind from "./component/itemFormfile";
 import ItemFormFindStu from "./component/studentFormfile";
 import ItemFormFindSub from "./component/subjectFormfile";
 import SignIn from './component/signIn';
-
+import Register from './component/Register';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -21,11 +21,17 @@ function App() {
      <Router>
       <div>
         <h3>My Project</h3>
+        
         <nav>
             <Link to="/">หน้าหลัก</Link>
+           
             <hr />
             {!isLoggedIn && (
                 <Link to="/signin">เข้าสู่ระบบ</Link>
+            )}
+            <hr />
+            {!isLoggedIn && (
+                <Link to="/Register">สมัครสมาชิก</Link>
             )}
         </nav>
 
@@ -33,6 +39,8 @@ function App() {
         {/* <> xxx </>คือตำแหน่งที่ข้อมูลจาก Component คือค่ามา */}
         <Routes>
           <Route path="/signin" element={<SignIn onLoginSuccess={handleLoginSuccess} />} />
+          <Route path="/Register" element={<Register/>} />
+         
           <Route path="/" element={
             <> 
               <div className="card">
@@ -40,16 +48,15 @@ function App() {
                   <>
                     <p>ยินดีต้อนรับ</p>
                     <p><ItemsList/></p>
-                    <hr/>
-                    <p><Students/></p>
-                    <hr/>
-                    <p><Subjects/></p>
-                    <hr/>
                     <p><ItemFormFind/></p>
                     <hr/>
+                    <p><Students/></p>
                     <p><ItemFormFindStu/></p>
                     <hr/>
+                    <p><Subjects/></p>
                     <p><ItemFormFindSub/></p>
+                    <hr/>
+                   
                   </>
                 ) : (
                   <p>กรุณา Login </p>
